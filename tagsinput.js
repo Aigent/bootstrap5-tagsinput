@@ -8,6 +8,8 @@
 
   var defaultOptions = {
     tagClass: function(item) {
+      if(bootstrap.Tooltip.VERSION && bootstrap.Tooltip.VERSION.match(/^5\./))
+        return 'badge bg-info';
       return 'badge badge-info';
     },
     focusClass: 'focus',
